@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maurício Cepinho - Portfólio</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 40px 15px; /* Adiciona espaço no topo/baixo e laterais */
+            display: flex;
+            flex-direction: column; /* Organiza os itens em coluna */
+            align-items: center;
+        }
+
+        /* O cartão principal de perfil */
+        .card-profile {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            padding: 40px 30px;
+            overflow: hidden;
+            margin-bottom: 40px; /* Espaço entre o perfil e a seção de projetos */
+        }
+
+        /* Estilo da foto de perfil */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .title {
+            font-size: 1.2em;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .social-links {
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            color: #333;
+            margin: 0 15px;
+            font-size: 1.8em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        /* --- NOVOS ESTILOS PARA A SEÇÃO DE PROJETOS --- */
+
+        .projects-section {
+            width: 100%;
+            max-width: 1200px; /* Largura máxima da seção */
+            text-align: center;
+        }
+
+        .projects-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsivo */
+            gap: 30px; /* Espaçamento entre os cartões */
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            text-decoration: none; /* Remove o sublinhado do link */
+            color: inherit; /* Herda a cor do texto do pai */
+            text-align: left;
+            overflow: hidden;
+            display: block; /* Faz o <a> se comportar como um bloco */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px); /* Efeito de levantar o card */
+            box-shadow: 0 15px 25px rgba(0,0,0,0.12);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px; /* Altura fixa para a imagem */
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+            display: block;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .project-info p {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #555;
+        }
+        
+        .project-tags {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .tag {
+            background-color: #eee;
+            color: #333;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            margin-right: 8px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-profile">
+        <img src="foto.png" alt="Foto de Perfil" class="profile-pic">
+        <h1>Maurício Oliveira Medeiros Cepinho</h1>
+        <p class="title">Estudante Desenvolvimento de Software Multiplataforma</p>
+        <p>
+            Olá! Sou um desenvolvedor apaixonado por tecnologia e por criar soluções
+            que melhoram a vida das pessoas. Tenho experiência com HTML, CSS, JavaScript e React.
+        </p>
+        <div class="social-links">
+            <a href="https://github.com/fatec-jacarei-dsm-portfolio/ra2581392413031" target="_blank" title="GitHub">GH</a>
+            <a href="https://www.linkedin.com/in/mauricio-cepinho-b8735269/" target="_blank" title="LinkedIn">IN</a>
+            <a href="mauriciocepinho@gmail.com" target="_blank" title="Email">@</a>
+        </div>
+    </div>
+
+    <section class="projects-section">
+        <h2>Projetos Acadêmicos</h2>
+
+        <div class="projects-grid">
+
+            <a href="https://github.com/storm-access-abp/qli-mate" target="_blank" class="project-card">
+                <img src="projeto-qclimate.png" alt="Banner do projeto Qli-mate">
+                <div class="project-info">
+                    <h3>Qli-mate</h3>
+                    <p>Plataforma para monitoramento climático e prevenção de riscos associados a eventos de vento extremo.</p>
+                    <div class="project-tags">
+                        <span class="tag">NextJS</span>
+                        <span class="tag">TailwindCSS</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Shadcn</span>
+                        <span class="tag">Zod</span>
+                        <span class="tag">Better Auth</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://gitlab.com/abp2-crewtech/crewtech" target="_blank" class="project-card">
+                <img src="projeto-nutrime.png" alt="Banner do projeto NutriMe">
+                <div class="project-info">
+                    <h3>NutriMe</h3>
+                    <p>Gerenciamento de alimentação e nutrição, permite que os usuários registrem refeições, monitorem metas nutricionais e tenham acompanhamento nutricional.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Typescript</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Axios</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">TailwindCSS</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="URL_DO_SEU_PROJETO_GOLDEN_NO_GITHUB" target="_blank" class="project-card">
+                <img src="projeto-golden.png" alt="Banner do projeto Golden Hive Solutions">
+                <div class="project-info">
+                    <h3>Golden Hive Solutions</h3>
+                    <p>Sistema web didático para apresentar a metodologia ágil Scrum.</p>
+                    <div class="project-tags">
+                        <span class="tag">Javascript</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+
+</body>
+</html>
